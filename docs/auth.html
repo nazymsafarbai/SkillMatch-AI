@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кіру және тіркелу — SkillMatch AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="auth-page">
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">SkillMatch<span>AI</span></a>
+
+            <nav class="nav-links">
+                <a href="index.html">Басты бет</a>
+                <a href="jobs.html">Вакансиялар</a>
+            </nav>
+
+            <a href="index.html" class="btn btn-outline">← Басты бет</a>
+        </div>
+    </header>
+
+    <main class="auth-main">
+        <section class="auth-intro">
+            <span class="section-label">SKILLMATCH AI</span>
+            <h1>Келесі мүмкіндігіңе <span>жол аш.</span></h1>
+            <p>
+                Профиль құрып, дағдыларыңа сәйкес жұмыс
+                орындарын зерттеуді баста.
+            </p>
+
+            <div class="auth-feature">
+                <span>✓</span>
+                Дағдыларыңды бір жерде басқар
+            </div>
+            <div class="auth-feature">
+                <span>✓</span>
+                Вакансиялармен сәйкестікті зертте
+            </div>
+            <div class="auth-feature">
+                <span>✓</span>
+                Мансаптық мүмкіндіктерді қара
+            </div>
+        </section>
+
+        <section class="auth-card">
+            <div class="auth-tabs">
+                <button type="button" class="auth-tab active" data-form="login">
+                    Кіру
+                </button>
+                <button type="button" class="auth-tab" data-form="register">
+                    Тіркелу
+                </button>
+            </div>
+
+            <form id="login-form" class="auth-form">
+                <h2>Қош келдің!</h2>
+                <p class="form-description">Аккаунтыңа кіру үшін мәліметтерді енгіз.</p>
+
+                <label for="login-email">Email</label>
+                <input
+                    type="email"
+                    id="login-email"
+                    placeholder="name@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="login-password">Құпиясөз</label>
+                <input
+                    type="password"
+                    id="login-password"
+                    placeholder="Құпиясөзіңді енгіз"
+                    autocomplete="current-password"
+                    required
+                    minlength="6"
+                >
+
+                <button type="submit" class="btn btn-primary auth-submit">
+                    Жүйеге кіру
+                </button>
+
+                <p class="form-message" aria-live="polite"></p>
+                <p class="switch-text">
+                    Аккаунтың жоқ па?
+                    <button type="button" class="text-button" data-switch="register">
+                        Тіркелу
+                    </button>
+                </p>
+            </form>
+
+            <form id="register-form" class="auth-form" hidden>
+                <h2>Аккаунт құру</h2>
+                <p class="form-description">SkillMatch AI платформасына қосыл.</p>
+
+                <label for="register-name">Аты-жөнің</label>
+                <input
+                    type="text"
+                    id="register-name"
+                    placeholder="Аты-жөніңді енгіз"
+                    autocomplete="name"
+                    required
+                    minlength="2"
+                >
+
+                <label for="register-email">Email</label>
+                <input
+                    type="email"
+                    id="register-email"
+                    placeholder="name@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="register-role">Пайдаланушы рөлі</label>
+                <select id="register-role" required>
+                    <option value="">Рөлді таңда</option>
+                    <option value="candidate">Жұмыс іздеуші</option>
+                    <option value="employer">Жұмыс беруші</option>
+                </select>
+
+                <label for="register-password">Құпиясөз</label>
+                <input
+                    type="password"
+                    id="register-password"
+                    placeholder="Кемінде 6 таңба"
+                    autocomplete="new-password"
+                    required
+                    minlength="6"
+                >
+
+                <button type="submit" class="btn btn-primary auth-submit">
+                    Тіркелу
+                </button>
+
+                <p class="form-message" aria-live="polite"></p>
+                <p class="switch-text">
+                    Аккаунтың бар ма?
+                    <button type="button" class="text-button" data-switch="login">
+                        Кіру
+                    </button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="index.html" class="logo">SkillMatch<span>AI</span></a>
+            <p>Дағдылар мен мүмкіндіктер бір жерде.</p>
+            <p>© 2026 SkillMatch AI</p>
+        </div>
+    </footer>
+
+</body>
+</html>
