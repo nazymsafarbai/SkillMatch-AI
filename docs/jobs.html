@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансиялар — SkillMatch AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">SkillMatch<span>AI</span></a>
+
+            <nav class="nav-links">
+                <a href="index.html">Басты бет</a>
+                <a href="jobs.html" class="active">Вакансиялар</a>
+                <a href="index.html#about">Жоба туралы</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="auth.html" class="btn btn-outline">Кіру</a>
+                <a href="auth.html" class="btn btn-primary">Тіркелу</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="jobs-hero">
+            <div class="container">
+                <span class="section-label">МҮМКІНДІКТЕРІҢДІ ЗЕРТТЕ</span>
+                <h1>Өзіңе сай <span>вакансияны тап</span></h1>
+                <p>
+                    Жұмыс орындарын қара, талаптарды зертте
+                    және өз дағдыларыңа сәйкес мүмкіндіктерді ізде.
+                </p>
+            </div>
+        </section>
+
+        <section class="container jobs-section">
+            <div class="jobs-heading">
+                <div>
+                    <h2>Ашық вакансиялар</h2>
+                    <p>Өзіңе қолайлы жұмыс орнын таңда.</p>
+                </div>
+                <span id="jobs-count" class="jobs-count">6 вакансия</span>
+            </div>
+
+            <div class="jobs-filters">
+                <div class="search-box">
+                    <label for="jobSearch">Вакансияны іздеу</label>
+                    <input
+                        type="search"
+                        id="jobSearch"
+                        placeholder="Мысалы: PHP Developer"
+                    >
+                </div>
+
+                <div class="filter-box">
+                    <label for="jobCategory">Бағыт бойынша сүзу</label>
+                    <select id="jobCategory">
+                        <option value="all">Барлық бағыт</option>
+                        <option value="development">Бағдарламалау</option>
+                        <option value="design">Дизайн</option>
+                        <option value="data">Деректермен жұмыс</option>
+                        <option value="management">Менеджмент</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="job-grid" id="jobGrid">
+
+                <article class="job-card" data-category="development">
+                    <div class="job-card-top">
+                        <div class="company-logo logo-purple">WS</div>
+                        <span class="job-type">Толық жұмыс күні</span>
+                    </div>
+                    <p class="job-category">Бағдарламалау</p>
+                    <h3>PHP Developer</h3>
+                    <p class="job-company">Web Solutions</p>
+                    <p class="job-location">Алматы · Кеңседе</p>
+                    <div class="job-skills">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>HTML</span>
+                    </div>
+                    <div class="job-card-bottom">
+                        <div class="match-info">
+                            <strong>85%</strong>
+                            <span>үлгілік сәйкестік</span>
+                        </div>
+                        <a href="auth.html" class="btn btn-primary">Қарау</a>
+                    </div>
+                </article>
+
+                <article class="job-card" data-category="design">
+                    <div class="job-card-top">
+                        <div class="company-logo logo-pink">CD</div>
+                        <span class="job-type">Толық жұмыс күні</span>
+                    </div>
+                    <p class="job-category">Дизайн</p>
+                    <h3>UI/UX Designer</h3>
+                    <p class="job-company">Creative Digital</p>
+                    <p class="job-location">Астана · Аралас формат</p>
+                    <div class="job-skills">
+                        <span>Figma</span>
+                        <span>UI/UX</span>
+                        <span>Prototype</span>
+                    </div>
+                    <div class="job-card-bottom">
+                        <div class="match-info">
+                            <strong>72%</strong>
+                            <span>үлгілік сәйкестік</span>
+                        </div>
+                        <a href="auth.html" class="btn btn-primary">Қарау</a>
+                    </div>
+                </article>
+
+                <article class="job-card" data-category="data">
+                    <div class="job-card-top">
+                        <div class="company-logo logo-blue">DA</div>
+                        <span class="job-type">Толық жұмыс күні</span>
+                    </div>
+                    <p class="job-category">Деректермен жұмыс</p>
+                    <h3>Data Analyst</h3>
+                    <p class="job-company">Data Analytics</p>
+                    <p class="job-location">Алматы · Қашықтан</p>
+                    <div class="job-skills">
+                        <span>SQL</span>
+                        <span>Excel</span>
+                        <span>Python</span>
+                    </div>
+                    <div class="job-card-bottom">
+                        <div class="match-info">
+                            <strong>68%</strong>
+                            <span>үлгілік сәйкестік</span>
+                        </div>
+                        <a href="auth.html" class="btn btn-primary">Қарау</a>
+                    </div>
+                </article>
+
+                <article class="job-card" data-category="development">
+                    <div class="job-card-top">
+                        <div class="company-logo logo-green">NT</div>
+                        <span class="job-type">Бастапқы деңгей</span>
+                    </div>
+                    <p class="job-category">Бағдарламалау</p>
+                    <h3>Frontend Developer</h3>
+                    <p class="job-company">NextTech</p>
+                    <p class="job-location">Астана · Қашықтан</p>
+                    <div class="job-skills">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="job-card-bottom">
+                        <div class="match-info">
+                            <strong>90%</strong>
+                            <span>үлгілік сәйкестік</span>
+                        </div>
+                        <a href="auth.html" class="btn btn-primary">Қарау</a>
+                    </div>
+                </article>
+
+                <article class="job-card" data-category="management">
+                    <div class="job-card-top">
+                        <div class="company-logo logo-orange">PM</div>
+                        <span class="job-type">Толық жұмыс күні</span>
+                    </div>
+                    <p class="job-category">Менеджмент</p>
+                    <h3>Project Manager</h3>
+                    <p class="job-company">Project Media</p>
+                    <p class="job-location">Алматы · Кеңседе</p>
+                    <div class="job-skills">
+                        <span>Planning</span>
+                        <span>Agile</span>
+                        <span>Communication</span>
+                    </div>
+                    <div class="job-card-bottom">
+                        <div class="match-info">
+                            <strong>65%</strong>
+                            <span>үлгілік сәйкестік</span>
+                        </div>
+                        <a href="auth.html" class="btn btn-primary">Қарау</a>
+                    </div>
+                </article>
+
+                <article class="job-card" data-category="development">
+                    <div class="job-card-top">
+                        <div class="company-logo logo-purple">ST</div>
+                        <span class="job-type">Тағылымдама</span>
+                    </div>
+                    <p class="job-category">Бағдарламалау</p>
+                    <h3>Junior Web Developer</h3>
+                    <p class="job-company">Start Tech</p>
+                    <p class="job-location">Шымкент · Аралас формат</p>
+                    <div class="job-skills">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <div class="job-card-bottom">
+                        <div class="match-info">
+                            <strong>80%</strong>
+                            <span>үлгілік сәйкестік</span>
+                        </div>
+                        <a href="auth.html" class="btn btn-primary">Қарау</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="noJobs" class="no-jobs" hidden>
+                Іздеу бойынша вакансия табылмады. Басқа сөзді немесе бағытты таңда.
+            </p>
+
+            <p class="demo-note">
+                Ескерту: вакансиялар мен сәйкестік пайыздары интерфейсті көрсетуге
+                арналған үлгілік деректер. Олар нақты жұмыс ұсыныстары емес.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="index.html" class="logo">SkillMatch<span>AI</span></a>
+            <p>Дағдылар мен мүмкіндіктер бір жерде.</p>
+            <p>© 2026 SkillMatch AI</p>
+        </div>
+    </footer>
+
+</body>
+</html>
